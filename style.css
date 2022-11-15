@@ -1,0 +1,266 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  font-family: Arial;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+* {
+    color: #262626;
+    font-family: "Comic Sans MS", "Comic Sans" !important;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#nav {
+    top: 0;
+    right: 0;
+    position: relative;
+    height: 100%;
+    float: right;
+}
+
+#header * {
+    line-height: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+#nav > span {
+    padding: 0px 10px;
+}
+
+#header {
+    width: 100%;
+    height: 30px;
+    border-bottom: solid 2px #262626;
+    box-sizing: border-box;
+}
+
+#header p {
+    float: left;
+
+
+
+        background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1rem;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.interactive:hover {
+    cursor: pointer;
+}
+
+#create-post {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    font-size: 2.5rem;
+    background-color: white;
+    padding: 10px;
+    border-radius: 60px;
+    vertical-align: middle;
+    border: solid 3px #262626;
+    opacity: .5;
+}
+
+#create-post:hover {
+    opacity: 1;
+}
+
+#page-container {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#social-feed {
+    width: 80%;
+    height: 100%;
+    float: right;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#member-list {
+    width: 20%;
+    height: 100%;
+    float: left;
+    border-right: dashed 2px #262626;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#member-list .profile-panel {
+    position: relative;
+    width: 100%;
+}
+
+#member-list .pfp {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    border: solid 1px gray;
+}
+
+#member-list .nameplate {
+    position: absolute;
+    right: 0;
+    left: 60px;
+    top: 0;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;    
+}
+
+.social-post {
+    width: 600px;
+    border: solid 2px #262626;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.social-post .pfp-container {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 300px;
+}
+
+.social-post .pfp-container .pfp {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    left: 5px;
+    border: solid 1px gray;
+}
+
+.social-post .content-container {
+    width: 540px;
+    min-height: 300px;
+    margin-left: 55px;
+}
+
+.social-post .content-container .name {
+    font-size: 1.15rem;
+    padding: 10px 20px 10px 20px;
+}
+
+.social-post .content-container .address {
+    display: inline-block;
+    color: gray;
+    font-size: .8rem;
+    padding: 0px 20px 20px;
+    border-bottom: dotted 1px gray;
+}
+
+.social-post .content-container .content {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    padding: 10px 20px 20px;
+}
+
+#post-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: transparent;
+}
+
+#post-container table {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#post-container td {
+    vertical-align: middle;
+}
+
+#new-post-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#new-post-content {
+    display: inline-block;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin-top: 5%;
+    padding: 5%;
+    background-color: #fafafa;
+    text-align: left;
+}

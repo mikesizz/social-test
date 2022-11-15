@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p>&nbsp;internet party!</p>
+            <div id="nav" class="hidden">
+                <span>Signed in as: <span id="account-address">NONE</span></span>
+                <span id="sync-button" class="button interactive action-controller" data-action="sync-wallet">SYNC</span>
+            </div>
+        </div>
+        <div id="post-container" class="hidden">
+            <table>
+                <tbody>
+                    <td>
+                        <div id="new-post-container">
+                            <div id="new-post-content" contenteditable=""></div>
+                            <button class="action-controller interactive" data-action="publish-new-post">create post</button>
+                            <button class="action-controller interactive" data-action="cancel-new-post">cancel</button>
+                        </div>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+        <div id="page-container">
+            <div id="social-feed">
+                <!-- <div class="social-post">
+                    <div class="pfp-container">
+                        <div class="pfp"></div>
+                    </div>
+                    <div class="content-container">
+                        <p class="name">social.nofungible.tez</p>
+                        <p class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+            <div id="member-list">
+                <br>
+                <p style="text-indent: 10px;">Members:</p>
+                <br>
+                <!-- <div class="profile-panel">
+                    <div class="pfp"></div>
+                    <div class="nameplate">
+                        <span class="name">social.nofungible.tez</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div id="create-post" class="interactive action-controller" data-action="create-new-post">✏️</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/beacon-sdk.min.js"></script>
+    <script src="/token-fetch.js"></script>
+    <script src="/event-emitter.js"></script>
+    <script src="/script.min.js"></script>
+</body>
+</html>
