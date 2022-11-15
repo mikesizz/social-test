@@ -91,6 +91,26 @@
         window.localStorage.setItem(CACHE_KEY, ciphertext);
     }
 
+    if (!cache.domain) {
+        const tezosDomain = prompt("Please provide your tezos domain.");
+
+        if (!tezosDomain) {
+            throw new Error('No tezosDomain');
+        }
+
+        const pw = prompt("Please enter your password");
+
+        if (!pw) {
+            throw new Error('no pw');
+        }
+
+        cache.domain = tezosDomain;
+
+        const ciphertext = CryptoJS.AES.encrypt(JSON.stringify(cache), pw);
+
+        window.localStorage.setItem(CACHE_KEY, ciphertext);
+    }
+
     const session = cache;
     const BeaconWallet = beacon.DAppClient;
     const state = {feed: {}};
@@ -142,10 +162,6 @@
 
         if (feed) {
             state.feed = feed;
-
-            if (state.feed.posts && Object.values(state.feed.posts).length) {
-                state.domain = Object.values(state.feed.posts)[0].domain;
-            }
         } else {
             state.feed = {posts: {}, interactions: {}};
 
@@ -194,9 +210,9 @@
     
             populateMembers().catch(console.error);
 
-            if (state.domain) {
+            if (session.domain) {
                 await request('PUT', 'https://1124-2601-602-9b01-c4f0-7c7d-e108-c4bf-7785.ngrok.io/api/content', {
-                    "domain": state.domain
+                    "domain": session.domain
                 });
             }
     
@@ -261,10 +277,6 @@
         state.cid = cid;
 
         await updateRecord(state.record.id, cid);
-
-        if (state.feed.posts && Object.values(state.feed.posts).length) {
-            state.domain = Object.values(state.feed.posts)[0].domain;
-        }
 
         return cid;
     }
